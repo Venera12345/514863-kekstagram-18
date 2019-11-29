@@ -1365,6 +1365,9 @@ main {
   opacity: 0.6;
 }
 
+.error-input {
+border: 2px solid #e90000 !important;
+}
 
 /**
  * Экран загрузки изображения
