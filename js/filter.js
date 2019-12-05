@@ -24,7 +24,7 @@
     return numReserve;
   };
 
-  var filter = function (btn) {
+  var filter = window.debounce(function (btn) {
     [].forEach.call(buttons, function (item) {
       item.classList.remove('img-filters__button--active');
     });
@@ -62,7 +62,7 @@
       fragment.appendChild(window.photoUsers.createPicture(item));
     });
     conteinerForPictures.appendChild(fragment);
-  };
+  });
   btnPopular.addEventListener('click', function () {
     filter(btnPopular);
   });
